@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+
+app:
+  jwt:
+    secret: "a2Nld25mdnVndXJodWVhaHVnaGlqb3Blamhib3BqdGVhbm9waGVva25va3A="
+    lifetime: 15m
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-1
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    baseline-on-migrate: true

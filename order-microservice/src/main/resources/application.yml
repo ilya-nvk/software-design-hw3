@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+auth:
+  details:
+    address: "http://auth-app:8080/auth-app/user"
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/db-2
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  task:
+    scheduling:
+      pool:
+        size: 2
